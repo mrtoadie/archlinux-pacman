@@ -1,0 +1,6 @@
+[Unit]
+Description=Automatic Pacman Updates
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/auto-pacman-update.sh
