@@ -50,7 +50,7 @@ function WriteLog
 
 function CleanUp
 {
-    find $LOGPATH/Pacman_toad_*.md -mtime +2 -delete
+    find $LOGPATH/Pacman_$HOSTNAME_*.md -mtime +5 -delete
 }
 
 function UpdateLog
