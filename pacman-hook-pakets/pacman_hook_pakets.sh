@@ -12,7 +12,6 @@ LOGDATE=$(date +%b.%d.%Y)
 LOGTIME=$(date +%H:%M)
 LOGPATH=/home/YOURUSER/Logs/
 LOGFILE="Pacman_$HOSTNAME"_"$LOGDATE.md"
-LOGFILE_SUM=/home/YOURUSER/Logs/Pacman_$HOSTNAME.md
 
 UPDATELOGDATE=$(date +%d.%m.%Y)
 UPDATELOG="Update_$HOSTNAME.md"
@@ -41,11 +40,6 @@ function getPacman
     echo '```txt' >> $LOGPATH$LOGFILE
     flatpak list >> $LOGPATH$LOGFILE
     echo '```' >> $LOGPATH$LOGFILE
-}
-
-function WriteLog
-{
-    echo '[['$LOGFILE']]' >> $LOGFILE_SUM
 }
 
 function CleanUp
